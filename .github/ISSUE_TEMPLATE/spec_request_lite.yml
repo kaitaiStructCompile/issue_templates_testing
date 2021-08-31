@@ -1,0 +1,53 @@
+name: Request a spec (lite edition)
+description: Contribute around a new format specification (for the ones familiar with the process the docs are already removed)
+labels: spec-request
+body:
+  - type: textarea
+    id: stub
+    validations:
+      required: true
+    attributes:
+      render: yaml
+      #label: Format stub
+      description: "A stub for this format. Must include the info that implementer would likely need and more info to make it searcheable"
+      value: |
+        meta:
+          id: # MANDATORY.
+          title: # MANDATORY.
+          application: 
+          file-extension: # todo: https://extension.nirsoft.net/
+          xref:
+            ansi: 
+            din: 
+            forensicswiki: # https://forensicswiki.xyz/
+            fileformat: # https://www.fileformat.info
+            incits: 
+            iso: 
+            justsolve: # http://fileformats.archiveteam.org/wiki/
+            loc: # https://www.loc.gov/preservation/digital/formats/
+            mime: 
+            pronom: # https://www.nationalarchives.gov.uk/pronom/fmt/
+              - x-fmt/
+            rfc: 
+            uti: 
+            ffdg: # https://docs.fileformat.com
+            wikidata: Q
+        
+        doc: | # MANDATORY
+        
+        
+        doc-ref: # MANDATORY.
+          - 
+          - 
+          - 
+  - type: textarea
+    id: misc
+    validations:
+      required: false
+    attributes:
+      #label: Additional info
+      description: "Additional info related to the status of the spec, that is not the part of the spec itself."
+      render: yaml
+      value: |
+        WiP:
+          - 
